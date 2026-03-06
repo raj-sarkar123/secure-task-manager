@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://secure-task-manager-rst4.onrender.com//api/v1',
+    baseURL: 'https://secure-task-manager-rst4.onrender.com/api/v1',
 });
 
 // Add a request interceptor to include the JWT token
