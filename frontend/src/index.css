@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    /* High-definition 24px Grid Pattern */
+    --background-image-grid-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%236366f1' stroke-width='1' stroke-opacity='0.15'%3E%3Cpath d='M24 0H0v24'/%3E%3C/g%3E%3C/svg%3E");
+
+    --color-indigo-600: #4f46e5;
+    --radius-3xl: 1.5rem;
+}
+
+@layer base {
+    body {
+        margin: 0;
+        /* bg-grid-pattern is automatically created from the theme variable above */
+        @apply bg-slate-50 bg-grid-pattern bg-fixed text-slate-900;
+        font-family: 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+}
