@@ -67,13 +67,15 @@ const Login = () => {
                                     <Mail size={18} />
                                 </div>
                                 <input
-                                    type="email"
-                                    required
-                                    className="block w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all outline-none text-slate-900 placeholder:text-slate-400"
-                                    placeholder="raj@example.com"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
+  type="email"
+  name="email"
+  autoComplete="email"
+  required
+  className="block w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all outline-none text-slate-900 placeholder:text-slate-400"
+  placeholder="raj@example.com"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
                             </div>
                         </div>
 
@@ -89,14 +91,16 @@ const Login = () => {
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-indigo-500 transition-colors">
                                     <Lock size={18} />
                                 </div>
-                                <input
-                                    type={showPassword ? "text" : "password"}
-                                    required
-                                    className="block w-full pl-11 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all outline-none text-slate-900 placeholder:text-slate-400"
-                                    placeholder="••••••••"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
+                               <input
+  type={showPassword ? "text" : "password"}
+  name="password"
+  autoComplete="current-password"
+  required
+  className="block w-full pl-11 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all outline-none text-slate-900 placeholder:text-slate-400"
+  placeholder="••••••••"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+/>
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}

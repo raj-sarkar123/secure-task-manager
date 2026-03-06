@@ -43,32 +43,33 @@ const Home = () => {
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                        {user ? (
-                            <Link
-                                to="/dashboard"
-                                className="group flex items-center gap-2.5 px-10 py-4 bg-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-indigo-200 hover:bg-indigo-700 transition-all active:scale-95"
-                            >
-                                Enter Workspace
-                                <ArrowRight size={19} className="group-hover:translate-x-1.5 transition-transform" />
-                            </Link>
-                        ) : (
-                            <>
-                                <Link
-                                    to="/register"
-                                    className="w-full sm:w-auto px-10 py-4 bg-slate-950 text-white font-bold rounded-2xl shadow-lg hover:bg-slate-800 transition-all active:scale-95 text-center"
-                                >
-                                    Get Started for Free
-                                </Link>
-                                <Link
-                                    to="/login"
-                                    className="w-full sm:w-auto px-10 py-4 bg-white/70 backdrop-blur-sm text-slate-800 font-bold rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 hover:text-indigo-600 hover:bg-white transition-all text-center"
-                                >
-                                    Access Workspace
-                                </Link>
-                            </>
-                        )}
-                    </div>
+                    {/* CTA Buttons */}
+<div className="flex flex-wrap items-center justify-center gap-4 px-4">
+    {user ? (
+        <Link
+            to="/dashboard"
+            className="group flex items-center justify-center gap-2.5 px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-indigo-200 hover:bg-indigo-700 transition-all active:scale-95 min-w-[200px]"
+        >
+            Enter Workspace
+            <ArrowRight size={19} className="group-hover:translate-x-1.5 transition-transform" />
+        </Link>
+    ) : (
+        <>
+            <Link
+                to="/register"
+                className="flex-1 sm:flex-none flex items-center justify-center px-8 py-4 bg-slate-950 text-white font-bold rounded-2xl shadow-lg hover:bg-slate-800 transition-all active:scale-95 text-center min-w-[160px] h-[60px]"
+            >
+                Get Started for Free
+            </Link>
+            <Link
+                to="/login"
+                className="flex-1 sm:flex-none flex items-center justify-center px-8 py-4 bg-white/70 backdrop-blur-sm text-slate-800 font-bold rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 hover:text-indigo-600 hover:bg-white transition-all text-center min-w-[160px] h-[60px]"
+            >
+                Access Workspace
+            </Link>
+        </>
+    )}
+</div>
                 </div>
 
                 {/* Background Decor - Blobs and Gradients */}
