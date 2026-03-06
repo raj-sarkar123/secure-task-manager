@@ -13,14 +13,12 @@ connectDB();
 const app = express();
 
 // CORS Configuration
+
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://secure-task-manager-eta.vercel.app/"
-    ],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
